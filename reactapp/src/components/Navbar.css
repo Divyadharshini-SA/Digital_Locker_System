@@ -1,0 +1,213 @@
+.navbar {
+    background: linear-gradient(90deg, #2c3e50, #4ca1af);
+    padding: 15px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+}
+
+
+
+.logo {
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 1.6rem;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+.nav-links {
+
+    list-style: none;
+
+    display: flex;
+
+    gap: 25px;
+
+    margin: 0;
+
+    align-items: center;
+
+}
+
+
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffd700;
+}
+.user-menu {
+    position: relative;
+    cursor: pointer;
+}
+.user-icon {
+        display: flex;
+        align-items: center;
+        color: white;
+
+}
+.white-icon{
+    color: white;
+}
+
+.dropdown {
+
+    position: absolute;
+
+    top: 50px;
+    /* slightly below the icon */
+
+    right: 0;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+
+    padding: 15px;
+
+    min-width: 160px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    animation: fadeIn 0.3s ease;
+
+    z-index: 2000;
+
+}
+
+
+
+.user-name {
+
+    font-weight: 600;
+
+    font-size: 1rem;
+
+    color: #333;
+
+    margin: 0;
+
+}
+
+
+
+.logout-btn {
+
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+
+    border: none;
+
+    cursor: pointer;
+
+    color: white;
+
+    padding: 10px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+.logout-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+}
+
+@media (max-width: 768px) {
+
+    .nav-links {
+
+        display: none;
+
+        flex-direction: column;
+
+        position: absolute;
+
+        top: 60px;
+
+        right: 10px;
+
+        background: #2c3e50;
+
+        padding: 15px;
+
+        border-radius: 8px;
+
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    }
+
+    .nav-links.open {
+
+        display: flex;
+
+    }
+
+    .hamburger {
+
+        display: block;
+
+    }
+
+}
+
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-10px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
